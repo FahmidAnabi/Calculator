@@ -4,12 +4,13 @@ let previousOperator;
 const screen = document.querySelector(".screen");
 
 function buttonClick(value) {
+  // Checking the value: number or symbol
   if (isNaN(parseInt(value))) {
     handleSymbol(value);
   } else {
     handleNumber(value);
   }
-  rerender();
+  reRender();
 }
 
 function handleNumber(value) {
@@ -82,7 +83,7 @@ function handleSymbol(value) {
   }
 }
 
-function rerender() {
+function reRender() {
   screen.innerText = buffer;
 }
 
